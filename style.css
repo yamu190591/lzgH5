@@ -1,0 +1,137 @@
+*{margin:0;padding:0;}
+.wrap{width:100%;height:100%;}
+html,body{width:7.5rem;height:13.34rem;font-size: 0.4rem;color:white;font-family:微软雅黑 Regular 微软雅黑;text-align: center;line-height: 0.4rem;background-color:black;}
+
+/*loading*/
+.loading {overflow: hidden;width:100%;height: 100%;position: absolute;left: 0;right: 0;bottom: 0;top: 0;background: url('images/loading-bg.jpg') no-repeat;z-index: 999;background-size:cover;}
+.loading .loading-tp {width: 100%;height: 100%;position: absolute;left: 0;right: 0;bottom: 0;top: 0;background: url('images/loading.png') no-repeat;z-index: 999;background-size:cover;}
+.loading .col-box {display:none;width:8rem;height:5.75rem;position: absolute;background: #e32752;top:8rem;left:50%;margin-left:-4rem;}
+.loading .loader {position:absolute;top:7rem; left:5rem;background:url('images/loader.png') no-repeat;background-size:cover;-webkit-animation: spin-rotate 3s 0s infinite linear;animation: spin-rotate 3s 0s infinite linear;z-index:999;height:7.2rem;width:7.2rem;}
+.loading-text{font-size:0.4rem;color: #9d9d9d;line-height:2.5rem;position: absolute;left:50%;top:2.5rem;z-index: 10000;width:4rem;margin-left:-2rem;}
+
+
+/*首页*/
+.wrap{display: none;}
+.index,.stage,.result,.zhanbu,.result{width:7.5rem;height:13.34rem;background:url("images/龙之谷H5-1.jpg") no-repeat;background-size:cover;position: absolute;left:0;top:0;}
+.stage{background:url("images/龙之谷H5-2.jpg") no-repeat;background-size:cover;display: none;}
+.zhanbu{background:url("images/龙之谷H5-4.jpg") no-repeat;background-size:cover;display: none;}
+.result{background:url("images/龙之谷H5-5.jpg") no-repeat;background-size:cover;display: none;}
+.logo{width:2.88rem;height:1.37rem;position: absolute;left:0.5rem;top:0.7rem;animation: down 1s ease forwards ;opacity: 0;-webkit-animation: down 1s ease forwards ;}
+.index-text{width:7.5rem;height:3.25rem;position: absolute;left:0;top:6rem;animation: left 1s ease forwards ;opacity: 0;-webkit-animation: left 1s ease forwards ;}
+.ball{width:2.4rem;height:2.4rem;position: absolute;left:2.5rem;top:9.7rem;animation:up 1s ease-in-out infinite ;opacity: 1;-webkit-animation: up 1s ease-in-out infinite alternate;}
+
+/*舞台*/
+.question,.question00-1,.question00-2{position: absolute;top:11rem;width:7.5rem;}
+.question00-1{display: none;}
+.question00-2{display: none;}
+.kuang{width:6.8rem;height:1.61rem;position: absolute;left:50%;margin-left:-3.4rem;top:10.5rem;}
+.ball-small{width:2.07rem;height:2.18rem;position: absolute;left:50%;margin-left:-1.035rem;top:6.5rem;animation:up02 2s ease-in-out infinite ;opacity: 1;-webkit-animation: up02 2s ease-in-out infinite alternate;}
+.answer{position: absolute;left:50%;top:2rem;margin-left:-2rem;}
+.answer p{width:4rem;height:0.68rem; background:url("images/answer-bar.jpg") no-repeat;background-size:100% 100%;line-height: 0.68rem;font-size: 0.3rem;margin-bottom:0.4rem;}
+.question-all>div{display: none;}
+.question-all .question01{display:none;}
+
+/*职业介绍*/
+.introduce{display: none;}
+.introduce>div p{position: absolute;top:11rem;width:7.5rem;line-height: 0.6rem;}
+.introduce>div:first-child p{top:10.7rem;}
+.introduce img{position: absolute; top:3rem;width:6rem;left:50%;margin-left:-3rem;z-index: 5;}
+.introduce .world{position: absolute;top:2rem;left:50%;width:6.29rem;height:3.48rem;margin-left:-3.15rem;}
+
+
+/*占卜*/
+.heros{width:6.8rem;height:4.12rem; position: absolute;top:7.5rem;left:50%;margin-left:-3.4rem;}
+.mingyunqian{opacity:0; width:3.53rem;height:5.48rem;position: absolute;left:50%;margin-left:-1.765rem;top:1.5rem;animation:ming 1s ease-in-out infinite alternate;-webkit-animation:ming 1s ease-in-out infinite alternate;}
+.light{position: absolute;width:100%;height:100%;display: none;background:white;z-index: 5;}
+
+/*结果页*/
+.hero-result{position: absolute;top:3rem;left:50%;width:6rem;margin-left:-3rem; animation:result 1s ease-in-out infinite alternate;-webkit-animation:result 1s ease-in-out infinite alternate;}
+.kuang-result{width:6.8rem;height:1.61rem; position: absolute;top:10rem;left:50%;margin-left:-3.5rem;}
+.share{position: absolute;top:9rem;right:1rem;width:2.43rem;z-index: 5;}
+.download{position: absolute;top:9rem;left:1rem;width:2.43rem;z-index: 5;height:0.68rem;background:url("images/down-button.jpg") no-repeat;background-size: cover;}
+.result-text{width:7.5rem; position: absolute;top:10.2rem;line-height: 0.6rem;}
+.result-text .zhiye{color:#6fee48;}
+.share-div{width:100%;height:100%;position: absolute;left:0;top:0;background:rgba(0,0,0,0.7); display: none;z-index: 10;}
+.share-div p{margin-top:2rem; opacity: 0.7;font-size: 0.4rem;}
+.share-div img{width:1.2rem;position: absolute;right:0.5rem;top:2rem;animation:fadeInUp 1s ease-in-out infinite;-webkit-animation:fadeInUp 1s ease-in-out infinite;}
+
+
+/*效果*/
+@keyframes down {
+    from{top:0;opacity: 0;}
+    to{top:0.7rem;opacity: 1;}
+}
+@-webkit-keyframes down {
+    from{top:0;opacity: 0;}
+    to{top:0.7rem;opacity: 1;}
+}
+@keyframes left {
+    from{left:-2rem;top:7rem;opacity: 0;}
+    to{left:0;top:6rem;opacity: 1;}
+}
+@-webkit-keyframes left {
+    from{left:-2rem;top:7rem;opacity: 0;}
+    to{left:0;top:6rem;opacity: 1;}
+}
+@keyframes up {
+    from{top:9.6rem;}
+    to{top:9.77rem;}
+}
+@-webkit-keyframes up {
+    from{top:9.6rem;}
+    to{top:9.77rem;}
+}
+@keyframes up02{
+    from{top:6.4rem;}
+    to{top:6.6rem;}
+}
+@-webkit-keyframes up02{
+    from{top:6.4rem;}
+    to{top:6.6rem;}
+}
+@keyframes show{
+    0%{opacity: 0;}
+    85%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@-webkit-keyframes show{
+    0%{opacity: 0;}
+    85%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes block{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@-webkit-keyframes block{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes ming{
+    from{top:1.7rem;opacity: 0.7;}
+    to{top:1.5rem;opacity: 1;}
+}
+@-webkit-keyframes ming{
+    from{top:1.7rem;opacity: 0.7;}
+    to{top:1.5rem;opacity: 1;}
+}
+
+@keyframes result{
+    from{top:1.2rem;}
+    to{top:1rem;}
+}
+@-webkit-keyframes result{
+    from{top:1.2rem;}
+    to{top:1rem;}
+}
+@keyframes fadeInUp {
+    0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}
+    100%{opacity:1;-webkit-transform:none;transform:none}
+}
+@-webkit-keyframes fadeInUp {
+    0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}
+    100%{opacity:1;-webkit-transform:none;transform:none}
+}
+
+

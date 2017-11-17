@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>《龙之谷》手游职业测试</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-2.0.2.min.js"></script>
+    <script src="js/load.js"></script>
+    <script src="js/js.js"></script>
+    <script type="text/javascript">
+        var pix=1/window.devicePixelRatio;
+        var ua = navigator.userAgent;
+        if (/Android (\d+\.\d+)/.test(ua)){
+            var version = parseFloat(RegExp.$1);
+            if(version>2.3){
+                document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale='+pix+', maximum-scale='+pix+', minimum-scale='+pix+'"/>');
+            }else{
+                document.write('<meta name="viewport" content="width=750, target-densitydpi=device-dpi">');
+            }
+        }
+        else {
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale='+pix+', maximum-scale='+pix+', minimum-scale='+pix+'"/>');
+        }
+
+        var supportsOrientationChange = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+        var timeoutId;
+        function setRem() {
+            var clientWidth = document.documentElement.clientWidth;
+            var nowPX = clientWidth / 750 * 100;
+            document.documentElement.style.fontSize = nowPX + 'px';
+        }
+        setRem();
+        window.addEventListener(supportsOrientationChange, function () {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(function () {
+                setRem();
+            }, 300);
+        }, false);
+
+        /*判断横竖屏*/
+                function hengshuping(){
+         if(window.orientation==180||window.orientation==0){
+         console.log("OK");
+         }
+         if(window.orientation==90||window.orientation==-90){
+         alert("竖屏观看更佳！")
+         }
+         }
+         window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", hengshuping, false);
+
+
+    </script>
+</head>
+<body>
+<!--loading界面-->
+<div class="loading">
+    <div class="loading-tp"></div>
+    <div class="col-box"></div>
+    <div class="loader">
+        <div class="loader-inner ball-spin-fade-loader">
+        </div>
+    </div>
+    <p class="loading-text">载入中... <span class="loading-percent"></span></p>
+</div>
+<div class="wrap">
+    <!--首页-->
+    <div class="index">
+        <img src="images/hero-1.png" style="position:absolute;display: none;">
+        <img src="images/logo.png" class="logo">
+        <img src="images/index-text.png" class="index-text">
+        <img src="images/ball.png" class="ball">
+    </div>
+    <!--占卜屋-->
+    <div class="stage">
+        <img src="images/ball-small.png" class="ball-small">
+        <div class="question-all">
+            <img src="images/kuang-bg.png" class="kuang">
+            <p class="question00-1">欢迎来到占卜屋...</p>
+            <p class="question00-2">请认真回答我的问题...</p>
+            <div class="question-div question01">
+                <p class="question">你的性别特征是？</p>
+                <div class="answer">
+                    <p value="0">汉子</p>
+                    <p value="0">妹子</p>
+                </div>
+            </div>
+            <div class="question-div question02">
+                <p class="question">当你看到一条龙，你的第一反应是？</p>
+                <div class="answer">
+                    <p value="4">上前打招呼</p>
+                    <p value="2">躲在暗处观察</p>
+                    <p value="3">让朋友去挑衅</p>
+                    <p value="1">趁早离开</p>
+                </div>
+            </div>
+            <div class="question-div question03">
+                <p class="question">一个陌生人向你打招呼，你会说？</p>
+                <div class="answer">
+                    <p value="4">“你谁啊？”</p>
+                    <p value="1">“哈喽真巧！”</p>
+                    <p value="2">不说且假装没看到</p>
+                    <p value="3">“我叫什么名字？”</p>
+                </div>
+            </div>
+            <div class="question-div question04">
+                <p class="question">老板或老师莫名奇妙教训你，你会？</p>
+                <div class="answer">
+                    <p value="4">当场掀桌子，表示愤慨</p>
+                    <p value="3">快速辩驳，找出逻辑硬伤</p>
+                    <p value="1">找别人证明你没有错</p>
+                    <p value="2">先忍着，秋后算账</p>
+                </div>
+            </div>
+            <div class="question-div question05-1">
+                <p class="question">当你向女性朋友炫耀时，会说？</p>
+                <div class="answer">
+                    <p value="4">我的马甲线很美</p>
+                    <p value="1">我是别人的开心果</p>
+                    <p value="3">我电脑修得好</p>
+                    <p value="2">我很喜欢紫色</p>
+                </div>
+            </div>
+            <div class="question-div question05-2">
+                <p class="question">当你向男性朋友炫耀时，会说？</p>
+                <div class="answer">
+                    <p value="4">我经常去健身</p>
+                    <p value="2">我怎么吃都不胖</p>
+                    <p value="3">我数学不错</p>
+                    <p value="1">别人开心我就开心</p>
+                </div>
+            </div>
+            <div class="question-div question06">
+                <p class="question">你喜欢呆的地方是？</p>
+                <div class="answer">
+                    <p value="3">一望无际大海边</p>
+                    <p value="4">演唱会现场</p>
+                    <p value="2">树林中的木屋</p>
+                    <p value="1">温暖的下午茶餐厅</p>
+                </div>
+            </div>
+            <div class="introduce">
+                <div>
+                    <img src="images/login.jpg" class="world">
+                    <p>此时..阿尔特里亚大陆<br>在你的眼前浮现...</p>
+                </div>
+                <div>
+                    <img src="images/zhanshi.png" class="zhanshi01">
+                    <!--<img src="images/jianshen.png" class="zhanshi02">-->
+                    <p>骁勇善战的<span>战士</span></p>
+                </div>
+                <div>
+                    <img src="images/jianshen.png" class="gongjianshou01">
+                    <!--<img src="images/youxia.png" class="gongjianshou02">-->
+                    <p>机敏果敢的<span>弓箭手</span></p>
+                </div>
+                <div>
+                    <img src="images/yuansushi.png" class="mofashi01">
+                    <!--<img src="images/modaoshi.png" class="mofashi02">-->
+                    <p>绚丽输出的<span>魔法师</span></p>
+                </div>
+                <div>
+                    <!--<img src="images/xianzhe.png" class="mushi01">-->
+                    <img src="images/jisi.png" class="mushi02">
+                    <p>强劲支援的<span>牧师</span></p>
+                </div>
+                <div>
+                    <p>而你的最佳职业是.......</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--占卜签-->
+    <div class="zhanbu">
+        <img src="images/heros.png" class="heros">
+        <img src="images/mingyunqian.png" class="mingyunqian">
+        <div class="light"></div>
+    </div>
+    <!--结果页-->
+    <div class="result">
+        <img src="images/hero-1.png" class="hero-result">
+        <img src="images/kuang-result.png" class="kuang-result">
+        <a href="https://dn.qq.com/cp/a20160224guide/index.htm" class="download"></a>
+        <img src="images/share-button.jpg" class="share">
+        <div class="result-text">
+            <p>最佳职业是：<span class="zhiye"></span></p>
+            <p>快来《龙之谷》的世界冒险吧！</p>
+        </div>
+    </div>
+    <div class="share-div">
+        <img src="images/icon_up.png" >
+        <p>点击右上角分享按钮</p>
+    </div>
+</div>
+</body>
+</html>
